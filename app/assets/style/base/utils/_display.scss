@@ -1,0 +1,11 @@
+// display
+@each $key, $value in $grid-breakpoints {
+  $infix: breakpoint-infix($key, $value);
+  @include media-generate($key, $value){
+    .d#{$infix}--none { display: none; }
+    .d#{$infix}--block { display: block; }
+    .d#{$infix}--inline { display: inline; }
+    .d#{$infix}--inline-block { display: inline-block; }
+    .d#{$infix}--flex { display: flex; }
+  }
+}

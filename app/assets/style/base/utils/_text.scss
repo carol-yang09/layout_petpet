@@ -1,0 +1,59 @@
+// text color
+@each $key, $value in $theme-colors {
+  .text--#{$key} {
+    color: $value;
+  }
+}
+
+// text decoration
+.text-decoration--none {
+  text-decoration: none;
+}
+
+// text align
+@each $key, $value in $grid-breakpoints {
+  $infix: breakpoint-infix($key, $value);
+  @include media-generate($key, $value){
+    .text#{$infix}--center {
+      text-align: center;
+    };
+
+    .text#{$infix}--right {
+      text-align: right;
+    };
+
+    .text#{$infix}--left {
+      text-align: left;
+    };
+  }
+}
+
+// font weight
+@each $key, $value in $font-weight {
+  @if $key != nromal {
+    .font--#{$key} {
+      font-weight: $value;
+    }
+  }
+}
+
+// font style
+.font--italic {
+  font-style: italic;
+}
+
+// font size
+@each $key, $value in $grid-breakpoints {
+  $infix: breakpoint-infix($key, $value);
+  @include media-generate($key, $value){
+    @each $key, $value in $font-sizes {
+      .h#{$key}#{$infix} {
+        font-size: $value;
+      }
+    }
+  }
+}
+
+.display--1 {
+  font-size: 5rem;
+}

@@ -1,0 +1,12 @@
+.login {
+  min-height: calc(100vh - 4rem);
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42%;
+    height: 100%;
+    background-image: url('../images/index-1.png');
+    @include bg-full(cover);
+  }
+}

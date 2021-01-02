@@ -1,0 +1,25 @@
+@import "abstracts/font";
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+@import "base/reset";
+@import "base/gobal.scss";
+@import 'base/utils';
+
+@import "layout/grid";
+@import "layout/forms";
+@import "layout/navbar";
+
+@import 'components/buttons';
+@import 'components/pagination';
+@import 'components/dropdown';
+@import 'components/card';
+@import 'components/silder';
+
+@import 'pages/index';
+@import 'pages/auth';
+@import 'pages/login';
+@import 'pages/service';
+@import 'pages/reservation';
+@import 'pages/modal';

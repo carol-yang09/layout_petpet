@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="container d--flex justify-content--center justify-content--lg--center align-items--center">
+    <h1 class="py--1">
+      <a href="index.html" class="logo">PETPET</a>
+    </h1>
+    <ul class="navbar__nav ml--auto">
+      <li class="navbar__item">
+        <a href="service.html" class="navbar__link">預約服務</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">成為寵物保姆</a>
+      </li>
+      <% if(current == 'auth') { %>
+        <li class="navbar__item navbar__dropdown dropdown dropdown--right">
+          <a href="login.html" class="navbar__link dropdown__toggler js-drowpdownToggler">
+            Hi, Joanne
+          </a>
+          <div class="dropdown__content">
+            <a href="auth.html" class="dropdown__link">會員資料</a>
+            <a href="#" class="dropdown__link">預約查詢</a>
+            <a href="#" class="dropdown__link border--bottom--1">歷史預約</a>
+            <a href="#" class="dropdown__link text--secondary">切換保母帳號</a>
+          </div>
+        </li>
+      <% } else { %>
+        <li class="navbar__item">
+          <a href="login.html" class="navbar__link">登入</a>
+        </li>
+      <% } %>
+    </ul>
+    <a href="#" class="navbar__toggler js-navbarToggler">
+      <span class="material-icons d--block text--third h1">
+        menu
+      </span>
+    </a>
+  </div>
+</nav>

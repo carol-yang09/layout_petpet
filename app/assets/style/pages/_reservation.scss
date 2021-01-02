@@ -1,0 +1,24 @@
+.photo {
+  @include bg-full(cover);
+  min-height: 27.5rem;
+}
+
+.photo-group {
+  display: flex;
+  height: 5.125rem;
+  @include desktop-s {
+    height: 6rem;
+  }
+  &__item {
+    flex: 1;
+    width: 100%;
+    @include bg-full(cover);
+  }
+}
+
+.sticky {
+  @include desktop-s {
+    position: sticky;
+    top: 0;
+  }
+}

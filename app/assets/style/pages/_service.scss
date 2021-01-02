@@ -1,0 +1,5 @@
+.second-banner__img {
+  width: 100%;
+  min-height: 22rem;
+  @include bg-full(cover);
+}
